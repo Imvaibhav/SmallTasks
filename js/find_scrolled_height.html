@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>find scrolled height </title>
+	<style type="text/css">
+		/*#header{
+			height: 100px;
+			border: 1px solid #000000;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+		}
+*/
+		#p{
+			border: 1px solid #000000;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			 background-color: #ccc
+			 
+		}
+	</style>
+	<script>
+		// function scrollFunction() {
+  // 			  // do your stuff here;
+  // 			  var scroll=document.body.scrollTop;
+  // 			  // alert(scroll);
+  // 			  // if(scroll>=400)
+  // 			  // {
+  // 			  // 	var header=document.getElementsById("header");
+  // 			  // 	header.style.display="block";
+  // 			  // 	header.style.position="fixed";
+
+  // 			  // }
+  // 		// 	  var element = document.getElementById("header");
+		// 		// element.innerHTML = "New Header";
+
+  // 			  var div=document.getElementById("p");
+  // 				div.innerHTML="u r scroll "+scroll+"px";
+
+  // 				var header1=document.getElementById("header");
+  // 				header1.innerHTML="u r scroll"+" "+scroll+"px";
+		// }
+
+		// document.onscroll = scrollFunction;
+		window.addEventListener('scroll', function(e) {
+			  var scroll_position = window.scrollY;
+			  var div=document.getElementById("p");
+			  div.innerHTML="u r scroll "+scroll_position+"px";
+		});
+</script>
+</head>
+<body style="height: 1400px">
+	<div id="p">
+		<!-- <h1 id="header">Old Header</h1> -->
+	</div>
+	<!-- <h1 id="header">Old Header</h1> -->
+</body>
+</html>

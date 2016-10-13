@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+    #div1 {
+        height: 100px;
+        width: 100px;
+        border: 1px solid #000000;
+        float: left;
+    }
+    
+    #div2 {
+        height: 100px;
+        width: 100px;
+        border: 1px solid #000000;
+        float: right;
+    }
+    </style>
+    <script type="text/javascript">
+    var c1=true,c2=true;
+    function increase(clicked_id) {
+    	var id1=document.getElementById("div1");
+    	var id2=document.getElementById("div2");
+    	
+    	if (clicked_id=="div1") {
+    		if (c1===false) {
+    			id2.style.height="100px";
+        		id2.style.width="100px";
+        		c1=true;
+        		
+    		}
+    		else{
+    			id2.style.height="300px";
+        		id2.style.width="300px";
+        		c1= !(c1);
+        		
+    		}
+    		
+    	}
+       	if (clicked_id=="div2") {
+    		if (c2===false) {
+    			id1.style.height="100px";
+        		id1.style.width="100px";
+        		c2=(!c2);
+    		}
+    		else{
+    			id1.style.height="300px";
+        		id1.style.width="300px";
+        		c2=(!c2);
+    		}
+    	}
+    }
+    </script>
+</head>
+<body>
+ <div id="div1" onclick="increase(this.id)">
+</div>
+<div id="div2" onclick="increase(this.id) "></div>
+
+</body>
+</html>

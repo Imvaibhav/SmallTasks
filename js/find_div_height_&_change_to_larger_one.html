@@ -1,0 +1,76 @@
+<html>
+<head>
+
+<style type="text/css">
+  .boxes{
+    height: 50px;
+    background-color: red;
+    border: 1px solid #000000;
+  }
+  .boxes1{
+    height: 300px;
+  }
+</style>
+
+<script type="text/javascript">
+var temp;
+function showUser()
+{
+  alert("its works")
+
+var offsetHeight = document.getElementById('content1').offsetHeight;
+  var content1=offsetHeight;
+  alert("height of 1st containt"+content1);
+
+  var offsetHeight = document.getElementById('content2').offsetHeight;
+  var content2=offsetHeight;
+  alert("height of 2nd containt"+content2);
+
+  var offsetHeight = document.getElementById('content3').offsetHeight;
+  var content3=offsetHeight;
+  alert("height of 3rd containt"+content3);
+  temp=0;
+  if (content1>=content2 && content1>=content3) 
+  {
+      temp=content1;
+  }
+  else{
+    if (content2>=content1 && content2>=content3) {
+      temp=content2;    
+    }
+    else{
+      if (content3>=content1 && content3>=content2) {
+      temp=content3;    
+      } 
+    }
+  }
+  
+  alert("Max height is : "+temp);
+  return temp;
+}
+function change_boxes() {
+    var boxes = document.getElementsByClassName('boxes'),
+        i = boxes.length; 
+        var h=showUser();
+        alert("change_boxes works : "+temp);
+    while(i--) {
+        boxes[i].style.height = h;
+    }
+}
+</script>
+</head>
+<body  onload="change_boxes()">
+ <div class="boxes" id="content1">
+   
+ </div>
+
+ <div class="boxes boxes1" id="content2">
+   
+ </div>
+ 
+ <div class="boxes" id="content3">
+   
+ </div>
+
+</body>
+</html>

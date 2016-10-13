@@ -1,0 +1,48 @@
+.border{
+	border: 1px solid #000000;
+}
+.slider{
+	margin: 10px;
+	height: 200px;
+	border: 1px solid #000000;
+	background-color: yellow;
+}
+.footer1{
+	position: relative;
+    margin-top: -212px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+	height: 200px;
+	width:1346px;
+	border: 1px solid #000000;
+	z-index: 100;
+	display: none;
+	background-color: green;
+}
+.footer{
+	margin: 10px;
+	bottom: 0px;
+	left: 0px;
+	height: 80px;
+	border: 1px solid #000000;
+}
+.footer .button{
+	/*height: 10px;
+	width: 10px;*/
+	border: 1px solid #000000;
+}
+.footer .button a{
+	padding: 10px;
+	text-decoration: none;
+}
+.myHide{
+	display: none;
+}
+.show{
+	display: block;
+}
+.ft1_div{
+	height: 150px;
+	
+}

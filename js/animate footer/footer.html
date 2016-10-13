@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-bootstrap/0.5pre/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="footer.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <!--  <style type="text/css">
+       .footer{
+        margin: 10px;
+        bottom: 0px;
+        left: 0px;
+        height: 80px;
+        border: 1px solid #000000;
+      }
+       .Hide{
+        display: none;
+        }
+        </style> -->
+        <script> 
+            $(document).ready(function(){
+                 var state=true;
+                $("button").click(function(){
+                    
+                    if(state)
+                        $( ".footer1" ).addClass( "show" );
+                    else
+                    {
+                        $( ".footer1" ).removeClass( "show" );
+                        $( ".footer1" ).addClass( "myHide" );
+                    }
+                    state=!state;
+                });
+                 
+            });
+
+
+          //     $( function() {
+          //   var state = true;
+          //   $( "#button" ).on( "click", function() {
+          //     if ( state ) {
+          //       $( "#effect" ).animate({
+          //         backgroundColor: "#aa0000",
+          //         color: "#fff",
+          //         width: 500
+          //       }, 1000 );
+          //     } else {
+          //       $( "#effect" ).animate({
+          //         backgroundColor: "#fff",
+          //         color: "#000",
+          //         width: 240
+          //       }, 1000 );
+          //     }
+          //     state = !state;
+          //   });
+          // } );
+        </script> 
+    </head>
+    <body>
+        <div class="slider">
+            
+        </div>
+        <div class="footer1 ">
+           <!--  <div class="row">
+                <div class="col-md-3 border ft1_div"></div>
+                <div class="col-md-3 border ft1_div"></div>
+                <div class="col-md-3 border ft1_div"></div>
+                <div class="col-md-3 border ft1_div"></div>
+            </div> -->
+        </div>
+        <div class="footer" id="lt">
+            <button>Start Animation</button>
+        </div>
+        
+    </body>
+</html>

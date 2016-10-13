@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add new div</title>
+	<style type="text/css">
+		.new{
+			height: 20px;
+			width: 500px;
+			border: 2px solid #000000;
+			display: inline-block;
+		}
+	</style>
+	<script type="text/javascript">
+		// function add()
+		// {
+		// 		alert("hiiii");
+		// 	var btn=document.getElementByName(add),
+		// 		new_div=document.createAttribute("div");
+		// 		att=document.createAttribute("class")
+		// 		att.value="new"
+		// 		new_div.setAttributeNode(att);
+		// 		document.body.appendChild(new_div); 
+
+		// }
+		function myFunction() {
+			var old_div=document.getElementById("holder")
+   			var btn = document.createElement("div");
+    		old_div.appendChild(btn);
+
+    		var att = document.createAttribute("class");       // Create a "class" attribute
+			att.value = "new";                           // Set the value of the class attribute
+			btn.setAttributeNode(att);                          // Add the class attribute to <h1>
+		}
+		function rem(){
+			var list = document.getElementById("holder");
+			var item = list.lastElementChild;
+   			list.removeChild(item);
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<button  name="add" type="button" onclick="myFunction()">Add</button>	
+		<button  name="remove" type="button" onclick="rem()">Remove</button>	
+	</div>
+	<div id="holder"></div>
+</body>
+</html>

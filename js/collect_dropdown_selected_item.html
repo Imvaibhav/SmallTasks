@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function GetSelectedItem(el)
+		{
+		    var e = document.getElementById(el);
+		    var strSel = "The Value is: " + e.options[e.selectedIndex].value + " and text is: " + e.options[e.selectedIndex].text;
+		    alert(strSel);
+		}
+	</script>
+</head>
+<body>
+<div>
+    <select id="select1">
+        <option value="1">test1</option>
+        <option value="2" selected="selected">test2</option>
+        <option value="3">test3</option>
+    </select>
+    <br/>
+    <button onClick="GetSelectedItem('select1');">Get Selected Item</button>
+</div>
+
+</body>
+</html>

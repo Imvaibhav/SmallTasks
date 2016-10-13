@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		// var last_known_scroll_position = 0;
+		// 	var ticking = false;
+
+			// function doSomething(scroll_pos) {
+			//   // do something with the scroll position
+			//   alert(scroll_pos);
+			// }
+
+			window.addEventListener('scroll', function(e) {
+			  var last_known_scroll_position = window.scrollY;
+			  alert(last_known_scroll_position);
+			  // if (!ticking) {
+			  //   window.requestAnimationFrame(function() {
+			  //     doSomething(last_known_scroll_position);
+			  //     ticking = false;
+			  //   });
+			  // }
+			  // ticking = true;
+		});
+	</script>
+</head>
+<body style="height: 1400px">
+
+</body>
+</html>
