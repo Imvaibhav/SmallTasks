@@ -5,21 +5,82 @@
     <title>Document</title>
     <style type="text/css">
         #div1{
-            width: 100px;
             height: 100px;
             border: 1px solid #000000;
             display: inline-block;
+            position: fixed;
+            right: auto;
+            background-color: red;
+
         }
         #div2{
-            width: 100px;
             height: 100px;
             border: 1px solid #000000;
             display: inline-block;
+            position: fixed;
+   	/*		right: 0px;*/
+   			background-color: green;
         }
     </style>
+    <script type="text/javascript">
+    	   var c1=true,c2=true,offset,div2_org_left;
+    	   function inc_width(id_name) {
+    	   		
+    	  		var div1_obj=document.getElementById("div1");
+    	  		var	div2_obj=document.getElementById("div2");
+    	  		var	div1_width=parseInt(div1_obj.style.width);
+    	  		var	div2_width=parseInt(div2_obj.style.width);
+    	  		var div1_left=parseInt(div1_obj.style.left);
+    	  		var div2_left=parseInt(div2_obj.style.left);
+    	  		// alert("let's start "+div1_width+" "+div2_width);
+
+
+    	  		if (id_name==="div1") {
+    	  			// alert("u clicked div1");
+    	  			if (c1) {
+    	  				offset=div2_left-div1_width-div1_left;
+    	  				// alert(div2_left+" - "+div1_width+" = "+offset);
+    	  				div1_obj.style.width=div1_width+div2_width+offset+"px";
+    	  				div1_obj.style.opacity=0.5;
+    	  				div1_obj.style.zIndex =100;
+    	  				c1=false;
+    	  			} else {
+    	  				var a=(div1_width-div2_width-offset);
+    	  				// alert(a);
+    	  				div1_obj.style.width=a+"px";
+    	  				div1_obj.style.opacity=1;
+    	  				div1_obj.style.zIndex =0;
+    	  				c1=true;
+    	  			}
+    	  		}
+    	  		if (id_name==="div2") {
+    	  			// alert("u clicked div2");
+    	  			if (c1) {
+    	  				offset=div2_left-div1_width;
+    	  				// alert(div2_left+" - "+div1_width+" = "+offset);
+    	  				div2_obj.style.width=div1_width+div2_width+offset+"px";
+    	  				div2_obj.style.opacity=0.5;
+    	  				// alert(div1_left);
+    	  				div2_org_left=div2_left;
+    	  				div2_obj.style.left=div1_left+"px";
+    	  				div2_obj.style.zIndex =100;
+    	  				c1=false;
+    	  			} else {
+    	  				var a=(div2_width-div1_width-offset);
+    	  				// alert(a);
+    	  				div2_obj.style.width=a+"px";
+    	  				div2_obj.style.opacity=1;
+    	  				div2_obj.style.left=div2_org_left+"px";
+    	  				div2_obj.style.zIndex =0;
+    	  				c1=true;
+    	  			}
+    	  		}
+    	   }
+
+    </script>
   </head>
   <body>
-    <div id="div1"></div>
-    <div id="div2"></div>
+    <div id="div1" onclick="inc_width(this.id)" style="width: 200px;left: 8px;opacity: 1; z-index: 0;"></div>
+    <div id="div2" onclick="inc_width(this.id)" style="width: 100px; position: fixed;left: 550px;opacity: 1;z-index: 0;"></div>
   </body>
 </html>
