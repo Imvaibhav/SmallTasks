@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>add new div using javascript</title>
+    <style type="text/css">
+    	.visible{
+    		height: 10px;
+    		width: 100px;
+    		border: 1px solid #000000;
+    	}
+    </style>
+  </head>
+  <body>
+    <button id="add"  onclick="add_div()">Add</button>
+    <button id="remove" onclick="remove_div()">Remove</button>
+    <div id="holder">
+    	
+    </div>
+
+    <script type="text/javascript">
+    	var count=1;
+    	function add_div() {
+    		var node=document.getElementById("holder");
+    		var newDiv = document.createElement("div"); 
+  			var newContent = document.createTextNode("div with id div"+count); 
+  			newDiv.appendChild(newContent);
+  	// 		var newid = document.createAttribute("id");
+  	// 		var set_class = document.createAttribute("class");
+			// newid.value = "div"+count;
+			// set_class.value="visible"
+			// count+=1;
+			// node.setAttributeNode(a);
+			newDiv.setAttribute("class", "visible");
+			newDiv.setAttribute("id","'div'+count");
+    	}
+    </script>
+  </body>
+</html>
